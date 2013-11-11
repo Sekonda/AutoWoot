@@ -69,5 +69,7 @@ function loadAutoWoot() {
 			// Run the script
 			runAutoWoot();
 		});
+	} else {
+		alert('This script can only run on Plug.DJs website.');
 	}
 }
