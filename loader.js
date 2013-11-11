@@ -6,7 +6,7 @@
  *
  */
 
-var latest = 'https://github.com/Sekonda/AutoWoot/blob/master/autowoot.js';
+var latest = 'https://raw.github.com/Sekonda/AutoWoot/master/autowoot.js';
 
 /* 
  * Rather than loading it locally here, we load the latest update from GitHub. 
