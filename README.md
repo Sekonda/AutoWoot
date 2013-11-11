@@ -6,13 +6,7 @@ If it works great, if it doesn't, well it's a mess about.
 
 ## Usuage 
 
-Drag <a href="javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());">this</a> to your bookmark toolbar and when you're in a Plug.DJ room click on it. Simples. 
+Drag [this](javascript:(function(\){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js'\);}(\)\);] to your bookmark toolbar and when you're in a Plug.DJ room click on it. Simples. 
 
 */aw kill* - This command will kill the autowooter. 
 */aw start* - This command will start up the autowooter.
-
-______
-
-*PS: I suck at Markdown :(*
-
-[1]:javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());
