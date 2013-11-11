@@ -6,12 +6,18 @@ If it works great, if it doesn't, well it's a mess about.
 
 ## Usuage 
 
-Drag a bookmarklet (still working on this...) to your bookmark toolbar and when you're in a Plug.DJ room click on it. Simples. 
+Well... I thought it was going to be simple to add a bookmarklet as a link, but not so much. Any way, create a bookmark and set the URL to the following:
+
+```javascript
+javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());
+```
+
+Once you've that done, just click on it when you're in a Plug.DJ Room. 
+
+## Commands
+
+There are some commands to start/stop the AutoWooter. 
 
 */aw kill* - This command will kill the autowooter. 
 
 */aw start* - This command will start up the autowooter.
-
-[test2][bookmarklet]
-
-[bookmarklet]: //javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());
