@@ -6,7 +6,12 @@ If it works great, if it doesn't, well it's a mess about.
 
 ## Usuage 
 
-Drag [this](javascript:(function(\){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js'\);}(\)\);] to your bookmark toolbar and when you're in a Plug.DJ room click on it. Simples. 
+Drag a bookmarklet (still working on this...) to your bookmark toolbar and when you're in a Plug.DJ room click on it. Simples. 
 
 */aw kill* - This command will kill the autowooter. 
+
 */aw start* - This command will start up the autowooter.
+
+[test2][bookmarklet]
+
+[bookmarklet]: //javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());
