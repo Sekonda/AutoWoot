@@ -5,9 +5,8 @@ This is just a mess about with the Plug.DJ API to try and get an AutoWooter work
 If it works great, if it doesn't, well it's a mess about. 
 
 ## Usuage 
-[test](javascript:(function%28%29{$.getScript%28'https://raw.github.com/Sekonda/AutoWoot/master/loader.js'%29;}%28%29\);) moar
 
-Well... I thought it was going to be simple to add a bookmarklet as a link, but not so much. Any way, create a bookmark and set the URL to the following:
+Create a bookmark and set the URL to the following:
 
 ```javascript
 javascript:(function(){$.getScript('https://raw.github.com/Sekonda/AutoWoot/master/loader.js');}());
