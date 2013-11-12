@@ -14,8 +14,7 @@ function runAutoWoot() {
 	runner = setInterval(function(){ 
     			doUpdate();
 			}, 5000);
-	console.log('AutoWoot running in background.');
-	alert('AutoWoot is running. Use: \'/aw kill\' to stop');
+	message('AutoWoot is running. Use: \'/aw kill\' to stop');
 
 	// Enable API Commands from Plug.DJ
 	API.on(API.CHAT_COMMAND, AWCommands);
@@ -24,8 +23,7 @@ function runAutoWoot() {
 
 function killAutoWoot() {
 	clearInterval(runner);
-	alert('AutoWoot disabled. Use \'/aw start\' to start it again.');
-	console.log('AutoWoot disabled via command.');
+	message('AutoWoot disabled. Use \'/aw start\' to start it again.');
 }
 
 // Commands that can be run. 
@@ -43,11 +41,6 @@ function doUpdate() {
 	wooted = $(wootID).hasClass('selected');
 
 	if(wooted == false) {
-		console.log('\n\n --- Runing Update --- ');
-		console.log('Current Song: ' + currentSong);
-		console.log('Last Song: ' + lastSong);
-		console.log('Wooted: ' + wooted);
-
 		// Update Variables any way... 
 		if(currentSong != API.getMedia().title) {
 			lastSong = currentSong;
@@ -56,9 +49,15 @@ function doUpdate() {
 
 		$(wootID).click();
 		console.log('Wooted');
+		message('Song Wooted');
 		wooted = true;
 		toReturn = true;
 	} 
+}
+
+function message(contents) {
+	var msg = '<div class="message"><i class="icon icon-chat-admin"></i><span class="from admin ">[AutoWoot] </span><span class="text from you">&nbsp;' + contents + '</span></div>';
+	$('#chat-messages').append(msg);
 }
 
 // loadAutoWoot() handles everything that needs to be done at the start. 
