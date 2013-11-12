@@ -7,14 +7,14 @@
  */
 
 // Variable Setup
-var lastSong = 'N/A', currentSong = API.getMedia().title, wootID = '#woot', timer = 5000, wooted = false, jQuery = '//code.jquery.com/jquery-2.0.3.min.js', debug, runner;
+var version = '0.1.3', lastSong = 'N/A', currentSong = API.getMedia().title, wootID = '#woot', timer = 5000, wooted = false, jQuery = '//code.jquery.com/jquery-2.0.3.min.js', debug, runner, welcome = '<span class="from you">Running AutoWoot Version: ' + version + '.</span><br /><br /><strong>Commands:</strong><br /><span style="color:#ac76ff">/aw start</span> - This will restart the bot.<br /><span style="color:#ac76ff">/aw kill</span> - This will stop the autowooting.';
 
 function runAutoWoot() {
 	console.log('Updates every ' + timer + 'ms');
 	runner = setInterval(function(){ 
     			doUpdate();
 			}, 5000);
-	message('AutoWoot is running. Use: \'/aw kill\' to stop');
+	message(welcome);
 
 	// Enable API Commands from Plug.DJ
 	API.on(API.CHAT_COMMAND, AWCommands);
@@ -31,7 +31,9 @@ function AWCommands(value) {
 	if(value === "/aw kill") {
 		killAutoWoot();
 	} else if(value === "/aw start") {
-		runAutoWoot();
+		loadAutoWoot();
+	} else if(value === "/aw") {
+		message(welcome);
 	}
 	
 }
@@ -49,14 +51,14 @@ function doUpdate() {
 
 		$(wootID).click();
 		console.log('Wooted');
-		message('Song Wooted');
+		message('Song Wooted.');
 		wooted = true;
 		toReturn = true;
 	} 
 }
 
 function message(contents) {
-	var msg = '<div class="message"><i class="icon icon-chat-admin"></i><span class="from admin ">[AutoWoot] </span><span class="text from you">&nbsp;' + contents + '</span></div>';
+	var msg = '<div class="message"><i class="icon icon-chat-admin"></i><span class="from admin ">[AutoWoot] </span><span class="text">&nbsp;' + contents + '</span></div>';
 	$('#chat-messages').append(msg);
 }
 
