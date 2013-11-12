@@ -8,7 +8,7 @@
 
 // Variable Setup
 var version = '0.1.4', wootID = '#woot', timer = 5000, wooted = false, jQuery = '//code.jquery.com/jquery-2.0.3.min.js';
-var welcome = '<span class="from you">Running AutoWoot Version: ' + version + '.</span><br /><br /><strong>Commands:</strong><br /><span style="color:#ac76ff">/aw start</span> - This will restart the bot.<br /><span style="color:#ac76ff">/aw kill</span> - This will stop the autowooting.<span style="color:#ac76ff"><br />/aw woot start</span> - This will start the autowooting.<br /><span style="color:#ac76ff">/aw woot stop</span> - This will stop the autowooting.<br /><span style="color:#ac76ff">/aw join start</span> - This will start <em>trying</em> to get you into the waitlist when the DJ changes.<br /><span style="color:#ac76ff">/aw join stop</span> - This will stop trying to get you into the waitlist.';
+var welcome = '<span class="from you">Running AutoWoot Version: ' + version + '.</span><br /><br /><strong>Commands:</strong><br /><span style="color:#ac76ff">/aw start</span> - This will restart the bot.<br /><span style="color:#ac76ff">/aw stop</span> - This will stop the autowooting.<span style="color:#ac76ff"><br />/aw woot start</span> - This will start the autowooting.<br /><span style="color:#ac76ff">/aw woot stop</span> - This will stop the autowooting.<br /><span style="color:#ac76ff">/aw join start</span> - This will start <em>trying</em> to get you into the waitlist when the DJ changes.<br /><span style="color:#ac76ff">/aw join stop</span> - This will stop trying to get you into the waitlist.';
 
 function runAutoWoot() {
 	//console.log('Updates every ' + timer + 'ms');
